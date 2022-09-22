@@ -1,6 +1,8 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
 using log4net;
+using NetDriveManage.Core;
 using NetDriveManage.SingleInstance;
+using NetDriveManage.Util;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -8,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using TextLocator.Util;
 
 namespace NetDriveManage
 {
@@ -21,6 +24,12 @@ namespace NetDriveManage
         // 托盘图标
         private static TaskbarIcon _taskbar;
         public static TaskbarIcon Taskbar { get => _taskbar; set => _taskbar = value; }
+
+        public App()
+        {
+            // 应用新版本配置文件
+            AppUtil.WriteValue("AppConfig", "Time", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:ffff"));
+        }
 
         /// <summary>
         /// 入口函数

@@ -1,5 +1,8 @@
 ﻿using log4net;
+using NetDriveManage.Entity;
+using NetDriveManage.Util;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -17,6 +20,20 @@ namespace NetDriveManage.Core
         /// </summary>
         public static void Shutdown()
         {
+            // 退出全部
+            try
+            {
+                List<NetDriveInfo> driveInfoList = NetDriveUtil.GetDriveInfoList();
+                foreach (NetDriveInfo driveInfo in driveInfoList)
+                {
+                    NetUseUtil.DisConnect(driveInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message, ex);
+            }
+
             log.Debug("退出当前应用程序进程");
             Environment.Exit(Environment.ExitCode); //Application.Current.Shutdown(-1);            
         }

@@ -46,7 +46,7 @@ namespace NetDriveManage
         /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.NetDriveInfoList.Children.Clear();
+            LoadAreaInfoList();
         }
 
         /// <summary>
@@ -169,11 +169,17 @@ namespace NetDriveManage
             if (!driveInfo.ConnectStatus)
             {
                 // 连接
+                NetUseUtil.Connect(driveInfo);
+                (sender as Button).Background = Brushes.Red;
+                (sender as Button).Content = "断开";
                 driveInfo.ConnectStatus = true;
             }
             else
             {
                 // 断开
+                NetUseUtil.DisConnect(driveInfo);
+                (sender as Button).Background = Brushes.Green;
+                (sender as Button).Content = "连接";
                 driveInfo.ConnectStatus = false;
             }
             (sender as Button).Tag = driveInfo;
