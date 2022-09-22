@@ -12,7 +12,7 @@
             <TextBlock Text="请为网络驱动设置别称，并填写相关信息。" FontWeight="Bold" Foreground="OrangeRed"/>
             <!-- 网络驱动别称 -->
             <Grid Margin="0,10,0,0" VerticalAlignment="Center">
-                <TextBlock Text="网络驱动别称：" Margin="0,0,480,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="驱动器别称：" Margin="0,0,480,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
                 <TextBox x:Name="NetDriveName" Margin="100,0,0,0" Width="440" VerticalAlignment="Center" HorizontalAlignment="Left">
                     <TextBox.Resources>
                         <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
