@@ -1,37 +1,17 @@
 # 网络驱动器管理
 
-#### 介绍
-网络驱动器管理
+#### 软件介绍
+用于管理windows共享和linuxsmb共享连接挂载到本地磁盘。主要目的帮助朋友解决已添加的共享连接服务端掉线，导致的资源管理器卡顿和崩溃的问题。通过这个软件管理配置信息，在需要的时候连接。不需要的时候断开，减少资源管理器打开的时候对网络驱动器的重连和验证问题。
 
 #### 软件架构
-软件架构说明
-
+使用.net wpf开发的单机软件
 
 #### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+发行版zip包解压即用。
 
 #### 使用说明
+![主界面和添加驱动器界面](images/main.png)
+![连接驱动器界面](images/connect.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 参考文章
+https://www.cnblogs.com/xuefei/p/4165480.html
