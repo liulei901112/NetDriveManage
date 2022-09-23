@@ -40,7 +40,7 @@ namespace NetDriveManage
         {
             this.DriveName.Text = driveInfo.DriveName;
             this.DriveTag.Text = driveInfo.DriveTag;
-            this.ConnectFolder.Text = driveInfo.Host;
+            this.ConnectHost.Text = driveInfo.Host;
             this.ConnectFolder.Text = driveInfo.Folder;
         }
     }
